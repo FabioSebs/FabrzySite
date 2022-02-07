@@ -4,7 +4,13 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      boxShadow: {
+        'glow-red': '10px 15px 30px rgba(255,0,0, .3)',
+        'glow-blue': '10px 15px 30px rgba(0,0,255, .5)',
+        'glow-purple': '10px 15px 30px rgba(102, 51, 153, .5)'
+      }
+    },
     keyframes: {
       fadeIn: {
         "0%": { opacity: 0 },
