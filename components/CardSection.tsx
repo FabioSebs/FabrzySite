@@ -1,10 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Cards from "./Cards";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { CookiesProvider, useCookies } from "react-cookie";
 
 const cardInfo = [
   {
@@ -41,6 +42,8 @@ const cardInfo = [
 
 const CardSection = () => {
   const { ref, inView } = useInView();
+  const [cookies, setCookie, removeCookie] = useCookies(["firstTime"]);
+  const [time, setTime] = useState(cookies.firstTime ? 2000 : 5000);
   const animation = useAnimation();
 
   useEffect(() => {
@@ -53,7 +56,7 @@ const CardSection = () => {
           bounce: 0.5,
         },
       });
-    }, 5000);
+    }, time);
   }, []);
 
   return (

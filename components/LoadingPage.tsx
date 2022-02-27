@@ -1,8 +1,8 @@
-import React, { useEffect, useRef, useState, useContext } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import BeatLoader from "react-spinners/BeatLoader";
 import Image from "next/image";
 import { gsap } from "gsap";
-import { Loading } from "../context/Loading";
+import { useCookies } from "react-cookie";
 
 const LoadingPage = () => {
   // STATES - HOOKS
@@ -10,6 +10,7 @@ const LoadingPage = () => {
   const description = useRef();
   const [loaded, setLoaded] = useState(true);
   const [gsapAni, setGsapAni] = useState(true);
+  const [cookies, setCookie, removeCookie] = useCookies(["firstTime"]);
 
   // GSAP - ANIMATIONS
   const q = gsap.utils.selector(description);
@@ -21,25 +22,37 @@ const LoadingPage = () => {
     return "animate-fadeOut";
   };
 
-  useEffect(() => {
-    // GSAP ANIMATION
-    setTimeout(() => {
-      description.current.classList.remove("opacity-0");
-      setGsapAni(false);
-      description.current = gsap
-        .timeline()
-        .to(q(".desc"), {
-          scaleY: 0.3,
-        })
-        .to(q(".desc"), {
-          scaleY: 1,
-        });
-    }, 2000);
+  const monthFromNow = () => {
+    let today = new Date();
+    today.setMonth(today.getMonth() + 1);
+    return today;
+  };
 
-    // FADEOUT EFFECT
-    setTimeout(() => {
-      setLoaded(false);
-    }, 4000);
+  useEffect(() => {
+    if (cookies.firstTime) {
+      wholePage.current.classList.add("hidden");
+    } else {
+      // GSAP ANIMATION
+      setTimeout(() => {
+        description.current.classList.remove("opacity-0");
+        setGsapAni(false);
+        description.current = gsap
+          .timeline()
+          .to(q(".desc"), {
+            scaleY: 0.3,
+          })
+          .to(q(".desc"), {
+            scaleY: 1,
+          });
+      }, 2000);
+
+      // FADEOUT EFFECT
+      setTimeout(() => {
+        setLoaded(false);
+        //SET COOKIE
+        setCookie("firstTime", 1, { path: "/", expires: monthFromNow() });
+      }, 4000);
+    }
   }, []);
 
   return (
