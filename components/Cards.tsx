@@ -8,7 +8,7 @@ const Cards = ({ title, image, description, action, link, glow }) => {
     >
       {/* Image */}
       <div className="h-full lg:w-[400px] w-[300px] relative">
-        <Image src={image} width={100} height={100} layout="fill" />
+        <Image src={image} layout="fill" />
       </div>
       {/* Text */}
       <div className="flex flex-col gap-4 basis-1/3 ml-9">
