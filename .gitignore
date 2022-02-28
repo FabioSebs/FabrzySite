@@ -15,9 +15,6 @@
 # production
 /build
 
-# sanity
-/sanity
-
 # misc
 .DS_Store
 *.pem
