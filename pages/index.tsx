@@ -24,10 +24,9 @@ const IndexPage = ({ posts }: Props) => {
 
   // TIMEOUT EFFECT
   useEffect(() => {
-    console.log(posts);
+    // console.table(posts);
     console.log(cookies.firstTime);
     if (cookies.firstTime == 1) {
-      console.log("test");
       setLoaded(false);
     } else {
       setTimeout(() => {
