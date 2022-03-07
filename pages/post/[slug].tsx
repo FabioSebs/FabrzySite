@@ -41,21 +41,24 @@ const Post = ({ post }) => {
 
   return (
     <article className="lg:mx-60 mx-20">
-      <h1>{title}</h1>
-      <span>By {name}</span>
-      {categories && (
-        <ul>
-          Posted in
-          {categories.map((category) => (
-            <li key={category}>{category}</li>
-          ))}
-        </ul>
-      )}
-      {authorImage && (
+      <h1 className="text-[30px] font-bold">{title}</h1>
+      <div className="gap-10 bg-slate-500 inline-flex text-white mb-20">
         <div>
-          <img src={urlFor(authorImage).width(50).url()} />
+          <span>By {name}</span>
+          {categories && (
+            <ul>
+              {categories.map((category) => (
+                <li key={category}>Posted in {category}</li>
+              ))}
+            </ul>
+          )}
         </div>
-      )}
+        {authorImage && (
+          <div>
+            <img src={urlFor(authorImage).width(50).url()} />
+          </div>
+        )}
+      </div>
       {body.map((text) => {
         // IMAGES OF THE BODY
         if (text.asset) {
