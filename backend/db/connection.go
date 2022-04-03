@@ -22,5 +22,4 @@ func Connect() {
 
 	// defer the close till after the main function has finished executing
 	defer db.Close()
-
 }

@@ -6,7 +6,6 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/FabioSebs/FabrzySite/backend/db"
 	"github.com/FabioSebs/FabrzySite/db"
 )
 
