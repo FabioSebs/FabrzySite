@@ -19,11 +19,22 @@ module.exports = {
       fadeOut: {
         "0%": { opacity: 1 },
         "100%": { opacity: 0 }
+      },
+      bounce: {
+        "0%": {
+          transform: "translateY(-10%)",
+        }, "50%": {
+          transform: "translateY(0%)",
+        },
+        "100%": {
+          transform: "translateY(-10%)",
+        }
       }
     },
     animation: {
       fadeIn: "fadeIn 1s ease-in",
-      fadeOut: "fadeOut 1s ease-out"
+      fadeOut: "fadeOut 1s ease-out",
+      bounce: "bounce 1s ease-in-out infinite"
     }
   },
   plugins: [],

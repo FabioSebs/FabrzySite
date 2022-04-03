@@ -4,6 +4,7 @@ import sanityClient from "../sanity";
 import imageUrlBuilder from "@sanity/image-url";
 import BlogCard from "../components/BlogCard";
 import { Post } from "../typings";
+import Footer from "../components/Footer";
 
 interface Props {
   posts: [Post];
@@ -37,6 +38,7 @@ const blog = ({ posts }: Props) => {
         })}
       </div>
       {/* <BlogCard image={}/> */}
+      <Footer />
     </div>
   );
 };

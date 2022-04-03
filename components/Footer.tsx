@@ -6,7 +6,7 @@ const Footer = () => {
   const [date, setDate] = useState(new Date());
 
   return (
-    <div className="w-full h-[70px] flex justify-between px-8 bg-white relative items-center">
+    <div className="w-full h-[70px] flex justify-between px-8 bg-white relative items-center top-[150px]">
       <h1 className="text-[15px]">
         <MobileScreenShareIcon /> Mobile App Coming Soon!
       </h1>

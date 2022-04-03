@@ -8,7 +8,7 @@ import Image from "next/image";
 let Links = [
   { name: "HOME", link: "/" },
   { name: "PORTFOLIO", link: "/portfolio" },
-  { name: "YOUTUBE", link: "/youtube" },
+  { name: "LOGIN", link: "/login" },
   { name: "BLOG", link: "/blog" },
   { name: "CONTACT", link: "/contact" },
 ];
