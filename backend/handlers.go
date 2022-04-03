@@ -1,8 +1,10 @@
 package main
 
 import (
+	"database/sql"
 	"encoding/json"
 	"fmt"
+	"log"
 	"net/http"
 	"time"
 
@@ -11,16 +13,17 @@ import (
 
 var jwtKey = []byte("my_secret_key")
 
-// MOCK USERS
-var users = map[string]string{
-	"user1": "password1",
-	"user2": "password2",
+// Create a struct to read the username and password from the request body
+type Login struct {
+	Username string `json:"username"`
+	Password string `json:"password"`
 }
 
-// Create a struct to read the username and password from the request body
-type Credentials struct {
-	Password string `json:"password"`
-	Username string `json:"username"`
+type SignUp struct {
+	Username        string `json:"username"`
+	Email           string `json:"email"`
+	Password        string `json:"password"`
+	ConfirmPassword string `json:"password"`
 }
 
 // We add jwt.RegisteredClaims as an embedded type, to provide fields like expiry time
@@ -29,8 +32,8 @@ type Claims struct {
 	jwt.StandardClaims
 }
 
-func Signin(w http.ResponseWriter, r *http.Request) {
-	var creds Credentials
+func LoginUser(w http.ResponseWriter, r *http.Request, db *sql.DB) {
+	var creds Login
 
 	// Getting the JSON Body from the Request and decoding it into creds
 	err := json.NewDecoder(r.Body).Decode(&creds)
@@ -41,12 +44,17 @@ func Signin(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	expectedPassword, ok := users[creds.Username]
+	// Check If Password Matches from Database
+	var s sql.NullString
 
-	// Checking if passwords match from the body and the database
-	if !ok || expectedPassword != creds.Password {
+	err = db.QueryRow("SELECT full_name FROM users WHERE password = ?", creds.Password).Scan(&s)
+	if err != nil {
+		log.Fatal("Incorrect Password")
+	}
+
+	if creds.Username != s.String {
 		w.WriteHeader(http.StatusUnauthorized)
-		return
+		log.Fatal("Incorrect Password")
 	}
 
 	// Making Expiration Time 5 Minutes
@@ -76,6 +84,33 @@ func Signin(w http.ResponseWriter, r *http.Request) {
 		Value:   tokenString,
 		Expires: expirationTime,
 	})
+}
+
+func SignUpUser(w http.ResponseWriter, r *http.Request, db *sql.DB) {
+	var creds SignUp
+
+	// Getting the JSON Body from the Request and decoding it into creds
+	err := json.NewDecoder(r.Body).Decode(&creds)
+
+	// Error Handling the Request
+	if err != nil {
+		w.WriteHeader(http.StatusBadRequest)
+		return
+	}
+
+	// Inserting user into database
+	res, err := db.Exec("INSERT INTO users VALUES (?,?,?,?)", creds.Username, creds.Email, creds.Password, creds.ConfirmPassword)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	// Logging
+	rowCnt, err := res.RowsAffected()
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	log.Printf("Rows affected %d\n", rowCnt)
 }
 
 func Home(w http.ResponseWriter, r *http.Request) {

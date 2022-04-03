@@ -6,6 +6,7 @@ import (
 	"log"
 	"net/http"
 
+	"github.com/FabioSebs/FabrzySite/color"
 	"github.com/FabioSebs/FabrzySite/db"
 )
 
@@ -46,18 +47,27 @@ func main() {
 	go hub.run()
 	log.SetFlags(0)
 
-	db.Connect()
-
 	// WEBSOCKET HANDLER
 	http.HandleFunc("/ws", func(w http.ResponseWriter, r *http.Request) {
 		serveWs(hub, w, r)
 	})
 
+	// DATABASE
+	db := db.Connect()
+	defer db.Close()
+
 	// JWT HANDLERS
-	http.HandleFunc("/signin", Signin)
+	http.HandleFunc("/login", func(w http.ResponseWriter, r *http.Request) {
+		LoginUser(w, r, db)
+	})
+
+	http.HandleFunc("/signup", func(w http.ResponseWriter, r *http.Request) {
+		SignUpUser(w, r, db)
+	})
+
 	http.HandleFunc("/home", Home)
 	http.HandleFunc("/refresh", Refresh)
 
-	fmt.Printf("Server is Live! \n")
+	fmt.Println(color.Cyan + "Server is Live!" + color.Reset)
 	log.Fatal(http.ListenAndServe(*addr, nil))
 }
