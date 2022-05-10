@@ -1,8 +1,9 @@
-import Image from "next/image";
 import React, { useState } from "react";
 import axios from "axios";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
+import * as bcrypt from "bcryptjs";
+import {hashPWD} from "../bcrypt"
 
 const signup = () => {
   const [username, setUsername] = useState("");
@@ -16,8 +17,8 @@ const signup = () => {
       const res = await axios.post("http://localhost:8080/signup", {
         username: username,
         email: email,
-        password: password,
-        date_of_birth: dob,
+        password: hashPWD(password),
+        birthdate: dob,
       });
       console.log(res.status);
     } catch (error) {
@@ -29,27 +30,28 @@ const signup = () => {
     <div>
       <div className="w-full h-screen flex-col justify-center">
         <Navbar />
-        <Image src="/loginbg.jpg" layout="fill" className="absolute z-[-10]" />
-        <div className="lg:w-[450px] w-[300px] lg:h-[800px] h-[600px] bg-black text-white flex flex-col justify-center align-middle gap-3 px-10 z-10 m-auto relative top-40">
+        <div className="lg:w-[300px] w-[300px] lg:h-[600px] h-[600px] bg-black text-white flex flex-col justify-center align-middle gap-3 px-10 z-10 mx-auto relative top-10 mb-10">
           <h1 className="ml-auto mr-auto text-[40px]">SIGN UP</h1>
           <label> Username:</label>
           <input
-            className="text-black"
+            className="text-black px-3"
             onChange={(e) => setUsername(e.target.value)}
           />
           <label> Email:</label>
           <input
-            className="text-black"
+            className="text-black px-3"
             onChange={(e) => setEmail(e.target.value)}
           />
           <label> Password:</label>
           <input
-            className="text-black"
+            type="password"
+            className="text-black px-3"
             onChange={(e) => setPassword(e.target.value)}
           />
           <label> Confirm Password:</label>
           <input
-            className="text-black"
+            type="password"
+            className="text-black px-3"
             onChange={(e) => setConfirmPassword(e.target.value)}
           />
           <label> Date of Birth:</label>
@@ -64,7 +66,8 @@ const signup = () => {
               Login!
             </button>
           </Link>
-          <button className="bg-yellow-300 text-black hover:cursor-pointer">
+
+          <button className="bg-yellow-300 text-black hover:cursor-pointer" onClick={signUpRequest}>
             Sign Up!
           </button>
         </div>

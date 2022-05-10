@@ -1,41 +1,62 @@
-import Image from "next/image";
 import React, { useState } from "react";
 import axios from "axios";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
+import {comparePWD} from "../bcrypt"
 
-const login = () => {
+const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-
-  const loginRequest = async () => {
+  const [loggedIn, setLoggedIn] = useState(false)
+  
+  const lookUp = async () => {
     try {
-      const res = await axios.post("http://localhost:8080/login", {
-        username: username,
-        password: password,
+      const res = await axios.post("http://localhost:8080/lookup", {
+        username: username
       });
-      console.log(res.status);
+      return res.data.password
     } catch (error) {
-      console.log(error);
+      console.log(error)
     }
+  }
+
+  const loginRequest = async (e) => {
+    e.preventDefault()
+    const pwd = await lookUp();
+    let check = undefined
+    if (pwd){
+      check = comparePWD(password, pwd)
+    }
+    
+    if (check) {
+      try {
+        const res = await axios.post("http://localhost:8080/login", {
+          username: username,
+          password: pwd,
+        });
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    
   };
 
   return (
     <div>
       <div className="w-full h-screen flex-col justify-center relative">
         <Navbar />
-        <Image src="/loginbg.jpg" layout="fill" className="absolute z-[-10]" />
-        <div className="lg:w-[450px] w-[300px] lg:h-[800px] h-[600px] bg-black text-white flex flex-col justify-center align-middle gap-5 px-10 z-10 m-auto relative top-40">
+        <div className="lg:w-[300px] w-[250px] lg:h-[450px] h-[400px] bg-black text-white flex flex-col justify-center align-middle gap-5 px-10 z-10 mx-auto relative top-14 mb-10">
           <h1 className="ml-auto mr-auto text-[40px]">LOGIN</h1>
           <label> Username:</label>
           <input
             onChange={(e) => setUsername(e.target.value)}
-            className="text-black"
+            className="text-black px-3"
           />
           <label> Password:</label>
           <input
             onChange={(e) => setPassword(e.target.value)}
-            className="text-black"
+            className="text-black px-3"
+            type="password"
           />
 
           <button
@@ -55,4 +76,4 @@ const login = () => {
   );
 };
 
-export default login;
+export default Login;

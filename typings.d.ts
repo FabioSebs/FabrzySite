@@ -15,4 +15,19 @@ export interface Post {
     slug: {
         current: string;
     };
+    categories: {
+        _key: string;
+        _ref: string;
+        _type: string;
+    }
+}
+
+export interface Category {
+    _createdAt: string;
+    _id: string;
+    _rev: string;
+    _type: string
+    _updatedAt: string;
+    description: string;
+    title: string;
 }

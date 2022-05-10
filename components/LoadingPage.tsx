@@ -63,7 +63,7 @@ const LoadingPage = () => {
       } z-20 bg-[#f6f3f3]`}
     >
       {/* Content */}
-      <div className="mb-6 flex flex-col items-center justify-center mb-[80px]">
+      <div className="flex flex-col items-center justify-center mb-[80px]">
         <div className="bg-[#FF2E2E] w-[210px] h-[210px] rounded-full border flex justify-center items-center">
           <Image
             src={"/FabioTeacher.jpg"}
