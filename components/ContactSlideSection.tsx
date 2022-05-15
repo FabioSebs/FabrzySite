@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from "react";
 import { ContactSection } from "../context/ContactSection";
 
 const ContactSlideSection = () => {
-  const { section, setSection } = useContext(ContactSection);
+  // const { section, setSection } = useContext(ContactSection);
 
   switch (section) {
     case "email":
