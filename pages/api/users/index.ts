@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 import { sampleUserData } from '../../../utils/sample-data'
-import { sanityClient, urlFor } from "../sanity"
+import sanityClient from "../../../sanity"
 
 const handler = (_req: NextApiRequest, res: NextApiResponse) => {
   try {
