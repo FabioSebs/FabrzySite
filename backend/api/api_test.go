@@ -1,4 +1,4 @@
-package main
+package api
 
 import (
 	"bytes"
@@ -20,7 +20,7 @@ const (
 
 func TestLogin(t *testing.T) {
 	// input data
-	login_req := &Login{
+	login_req := Login{
 		Username: USERNAME,
 		Password: PASSWORD,
 	}
@@ -36,7 +36,7 @@ func TestLogin(t *testing.T) {
 
 	// Disaptch the HTTP Request
 	handler := http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		LoginUser(w, r, DATABASE)
+		LoginUser(w, r, DB)
 	})
 
 	handler.ServeHTTP(res, req)
@@ -60,7 +60,7 @@ func TestLogin(t *testing.T) {
 func TestSignup(t *testing.T) {
 	// Created the input data
 
-	signup_req := &SignUp{
+	signup_req := SignUp{
 		Username:  USERNAME,
 		Password:  PASSWORD,
 		Email:     EMAIL,
@@ -77,7 +77,7 @@ func TestSignup(t *testing.T) {
 
 	// Dispatch the HTTP Request
 	handler := http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		SignUpUser(w, r, DATABASE)
+		SignUpUser(w, r, DB)
 	})
 
 	handler.ServeHTTP(res, req)

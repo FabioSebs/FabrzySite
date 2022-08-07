@@ -14,7 +14,7 @@ func Connect() *sql.DB {
 	// Open up our database connection.
 	// I've set up a database on my local machine using phpmyadmin.
 	// The database is called testDbfabrzy_site
-	db, err := sql.Open("mysql", "root:Alodia2001!@tcp(127.0.0.1:3306)/fabrzy_site")
+	db, err := sql.Open("mysql", "root:fiddlesticks@tcp(127.0.0.1:3306)/fabrzydb")
 
 	// if there is an error opening the connection, handle it
 	if err != nil {

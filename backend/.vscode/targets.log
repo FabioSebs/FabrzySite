@@ -7,9 +7,8 @@ make: *** No rule to make target 'all'.  Stop.
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
- 
 
-# Make data base, printed on Sun Aug 07 06:20:14 2022
+# Make data base, printed on Sun Jul 03 08:27:53 2022
 
 # Variables
 
@@ -24,7 +23,9 @@ TMPDIR = C:\Users\espin\AppData\Local\Temp
 # environment
 LOCALAPPDATA = C:\Users\espin\AppData\Local
 # environment
-VSCODE_CWD = C:\Users\espin\Desktop\Computer Science\FabrzySite
+VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-0abf05f8-8cb3-419f-bf9d-9b9b49acd345-sock
+# environment
+VSCODE_CWD = C:\Users\espin\Desktop\Computer Science\FabrzySite\backend
 # environment
 MINGW_PREFIX = C:/Program Files/Git/mingw64
 # environment
@@ -44,7 +45,7 @@ GOPATH = C:\Users\espin\go
 # environment
 ACLOCAL_PATH = C:\Program Files\Git\mingw64\share\aclocal;C:\Program Files\Git\usr\share\aclocal
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_16780_EFFRKYKDOTQARCOU
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_16316_UWZPBGEVPIJBQZWW
 # environment
 ORIGINAL_TEMP = C:/Users/espin/AppData/Local/Temp
 # environment
@@ -52,19 +53,21 @@ VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # default
 .VARIABLES := 
 # environment
-PWD = C:/Users/espin/Desktop/Computer Science/FabrzySite
+PWD = C:/Users/espin/Desktop/Computer Science/FabrzySite/backend
 # automatic
 %D = $(patsubst %/,%,$(patsubst %\,%,$(dir $%)))
 # environment
 HOSTNAME = LAPTOP-6VSS0VBA
 # environment
-OLDPWD = C:/Users/espin/Desktop/Computer Science
+OLDPWD = C:/Users/espin/Desktop/Computer Science/FabrzySite
 # automatic
 ^D = $(patsubst %/,%,$(patsubst %\,%,$(dir $^)))
+# environment
+VSCODE_LOG_STACK = false
 # automatic
 %F = $(notdir $%)
 # environment
-VSCODE_CODE_CACHE_PATH = C:\Users\espin\AppData\Roaming\Code\CachedData\3b889b090b5ad5793f524b5d1d39fda662b96a2a
+VSCODE_CODE_CACHE_PATH = C:\Users\espin\AppData\Roaming\Code\CachedData\30d9c6cd9483b2cc586687151bcbcd635f373630
 # environment
 SSH_ASKPASS = C:/Program Files/Git/mingw64/bin/git-askpass.exe
 # environment
@@ -84,7 +87,9 @@ PKG_CONFIG_PATH = C:\Program Files\Git\mingw64\lib\pkgconfig;C:\Program Files\Gi
 # environment
 ONEDRIVE = C:\Users\espin\OneDrive
 # makefile
-CURDIR := c:/Users/espin/Desktop/Computer Science/FabrzySite
+CURDIR := c:/Users/espin/Desktop/Computer Science/FabrzySite/backend
+# environment
+VSCODE_PIPE_LOGGING = true
 # environment
 MSYSTEM_CARCH = x86_64
 # environment
@@ -106,7 +111,9 @@ MAKEFILE_LIST := makefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 16780
+VSCODE_VERBOSE_LOGGING = true
+# environment
+VSCODE_PID = 16316
 # automatic
 ?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
 # environment
@@ -130,7 +137,7 @@ INFOPATH = C:\Program Files\Git\usr\local\info;C:\Program Files\Git\usr\share\in
 # makefile
 SHELL = C:/Program Files/Git/usr/bin/sh.exe
 # environment
-ORIGINAL_PATH = C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\espin\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files\Git\cmd;C:\Program Files\nodejs;C:\ProgramData\chocolatey\bin;C:\Program Files\Go\bin;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\espin\AppData\Local\Microsoft\WindowsApps;C:\Users\espin\AppData\Roaming\npm;C:\Users\espin\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\espin\go\bin
+ORIGINAL_PATH = C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\espin\bin;C:\Python310\Scripts;C:\Python310;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files\Git\cmd;C:\Program Files\nodejs;C:\ProgramData\chocolatey\bin;C:\Program Files\Go\bin;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\espin\AppData\Local\Microsoft\WindowsApps;C:\Users\espin\AppData\Roaming\npm;C:\Users\espin\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\espin\go\bin
 # environment
 HOMEPATH = \Users\espin
 # default
@@ -148,7 +155,7 @@ MAKELEVEL := 0
 # default
 MAKE = $(MAKE_COMMAND)
 # environment
-PATH = C:\Users\espin\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\espin\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files\Git\cmd;C:\Program Files\nodejs;C:\ProgramData\chocolatey\bin;C:\Program Files\Go\bin;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\espin\AppData\Local\Microsoft\WindowsApps;C:\Users\espin\AppData\Roaming\npm;C:\Users\espin\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\espin\go\bin;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
+PATH = C:\Users\espin\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\espin\bin;C:\Python310\Scripts;C:\Python310;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files\Git\cmd;C:\Program Files\nodejs;C:\ProgramData\chocolatey\bin;C:\Program Files\Go\bin;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\espin\AppData\Local\Microsoft\WindowsApps;C:\Users\espin\AppData\Roaming\npm;C:\Users\espin\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\espin\go\bin;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
 # environment
 COMPUTERNAME = LAPTOP-6VSS0VBA
 # default
@@ -164,10 +171,11 @@ CHOCOLATEYLASTPATHUPDATE = 133007877871786458
 # environment
 LOGONSERVER = \\LAPTOP-6VSS0VBA
 # environment
+VSCODE_LOG_NATIVE = false
+# environment
 USERNAME = espin
 # environment
-TERM_PROGRAM  
-= mintty
+TERM_PROGRAM = mintty
 # environment
 COMMONPROGRAMFILES = C:\Program Files (x86)\Common Files
 # automatic
@@ -177,7 +185,7 @@ PROGRAMW6432 = C:\Program Files
 # environment
 MSYSTEM_CHOST = x86_64-w64-mingw32
 # environment
-PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW
 # automatic
 +F = $(notdir $+)
 # environment
@@ -193,7 +201,7 @@ OS = Windows_NT
 # environment
 MSYSTEM_PREFIX = C:/Program Files/Git/mingw64
 # makefile
-.DEFAULT_GOAL := status
+.DEFAULT_GOAL := postgres
 # environment
 DISPLAY = needs-to-be-defined
 # default
@@ -235,7 +243,7 @@ TEMP = C:\Users\espin\AppData\Local\Temp
 # environment
 TERM = xterm
 # environment
-VSCODE_IPC_HOOK = \\.\pipe\9ccbd71fb2a7017c10b2dc64aafeb067-1.69.2-main-sock
+VSCODE_IPC_HOOK = \\.\pipe\9ccbd71fb2a7017c10b2dc64aafeb067-1.68.1-main-sock
 # environment
 DXSDK_DIR = C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\
 # environment
@@ -259,7 +267,8 @@ VSCODE_CLI = 1
 # environment
 ELECTRON_NO_ATTACH_CONSOLE = 1
 # default
-.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync load
+.FEA 
+TURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync load
 # environment
 PROCESSOR_REVISION = 6001
 # environment
@@ -267,7 +276,7 @@ TERM_PROGRAM_VERSION = 3.6.1
 # environment
 PROCESSOR_IDENTIFIER = AMD64 Family 23 Model 96 Stepping 1, AuthenticAMD
 # variable set hash-table stats:
-# Load=126/1024=12%, Rehash=0, Collisions=12/153=8%
+# Load=131/1024=13%, Rehash=0, Collisions=13/158=8%
 
 # Pattern-specific Variable Values
 
@@ -275,9 +284,9 @@ PROCESSOR_IDENTIFIER = AMD64 Family 23 Model 96 Stepping 1, AuthenticAMD
 
 # Directories
 
-# . (key c:/Users/espin/Desktop/Computer Science/FabrzySite, mtime 1656784698): 29 files, no impossibilities.
+# . (key c:/Users/espin/Desktop/Computer Science/FabrzySite/backend, mtime 1656782486): 16 files, no impossibilities.
 
-# 29 files, no impossibilities in 1 directories.
+# 16 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -285,19 +294,36 @@ PROCESSOR_IDENTIFIER = AMD64 Family 23 Model 96 Stepping 1, AuthenticAMD
 
 # Files
 
-commit: add
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-#  recipe to execute (from 'makefile', line 8):
-	git commit -m "update"
-
-push: commit
+pull:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'makefile', line 5):
-	git push
+	docker pull postgres:12-alpine
+
+migratedown:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 17):
+	migrate -path db/migration -database "postgresql:://fabrzy:secret@localhost:5432/fabrzyDB?sslmode=disabled" -verbose down
+
+dropdb:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 11):
+	docker exec -it fabrzyDB dropdb --username=fabrzy --owner=fabrzy fabrzyDB
+
+migrateup:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 14):
+	migrate -path db/migration -database "postgresql:://fabrzy:secret@localhost:5432/fabrzyDB?sslmode=disabled" -verbose up
 
 # Not a target:
 .DEFAULT:
@@ -319,34 +345,41 @@ makefile:
 #  File has been updated.
 #  Successfully updated.
 
-add:
+postgres: pull
+#  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-#  recipe to execute (from 'makefile', line 11):
-	git add .
-
-status:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
+#  File does not exist.
 #  File has not been updated.
 #  recipe to execute (from 'makefile', line 2):
-	git status
+	docker run --name fabrzyDB  -p 5432:5432 -e POSTGRES_USER=fabrzy -e POSTGRES_PASSWORD=secret -d 7461e2b092df 
+
+createdb:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 8):
+	docker exec -it fabrzyDB createdb --username=fabrzy --owner=fabrzy fabrzyDB
+
+.PHONY: postgres createdb dropdb migrateup migratedown
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # files hash-table stats:
-# Load=8/1024=1%, Rehash=0, Collisions=0/22=0%
+# Load=11/1024=1%, Rehash=0, Collisions=0/28=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 36 / storage = 343 B / avg = 9 B
-# current buf: size = 8174 B / used = 343 B / count = 36 / avg = 9 B
+# strcache buffers: 1 (0) / strings = 26 / storage = 202 B / avg = 7 B
+# current buf: size = 8174 B / used = 202 B / count = 26 / avg = 7 B
 
-# strcache performance: lookups = 46 / hit rate = 21%
+# strcache performance: lookups = 43 / hit rate = 39%
 # hash-table stats:
-# Load=36/8192=0%, Rehash=0, Collisions=0/46=0%
-# Finished Make data base on Sun Aug 07 06:20:14 2022
+# Load=26/8192=0%, Rehash=0, Collisions=0/43=0%
+# Finished Make data base on Sun Jul 03 08:27:53 2022
 
  

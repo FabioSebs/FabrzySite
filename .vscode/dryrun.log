@@ -1,4 +1,5 @@
 make.exe --dry-run --always-make --keep-going --print-directory
-'make.exe' is not recognized as an internal or external command,
-operable program or batch file.
-
+make: Entering directory 'c:/Users/espin/Desktop/Computer Science/FabrzySite'
+git status
+make: Leaving directory 'c:/Users/espin/Desktop/Computer Science/FabrzySite'
+ 
