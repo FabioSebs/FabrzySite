@@ -58,9 +58,8 @@ const LoadingPage = () => {
   return (
     <div
       ref={wholePage}
-      className={`h-screen w-screen absolute text-center flex justify-center items-center flex-col transition-all duration-300 ${
-        loaded ? "animate-fadeIn" : fadeOut()
-      } z-20 bg-[#f6f3f3]`}
+      className={`h-full w-full absolute text-center flex justify-center items-center flex-col transition-all duration-300 ${loaded ? "animate-fadeIn" : fadeOut()
+        } z-20 bg-[#f6f3f3]`}
     >
       {/* Content */}
       <div className="flex flex-col items-center justify-center mb-[80px]">
@@ -83,9 +82,8 @@ const LoadingPage = () => {
 
       {/* Extra Info */}
       <div
-        className={`flex justify-between mt-[200px] ${
-          gsapAni ? "opacity-0" : "animate-fadeIn"
-        } text-gray-700`}
+        className={`flex justify-between ${gsapAni ? "opacity-0" : "animate-fadeIn"
+          } text-gray-700`}
         ref={description}
       >
         <h1 className="md:w-[400px] w-[110px] relative md:text-[30px] desc">

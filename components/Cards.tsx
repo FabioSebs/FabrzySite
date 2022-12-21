@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const Cards = ({ title, image, description, action, link, glow }) => {
   return (
@@ -8,7 +9,7 @@ const Cards = ({ title, image, description, action, link, glow }) => {
     >
       {/* Image */}
       <div className="h-full lg:w-[400px] w-[300px] relative">
-        <Image src={image} layout="fill" />
+        <Link href={link}><Image src={image} layout="fill" /></Link>
       </div>
       {/* Text */}
       <div className="flex flex-col gap-4 basis-1/3 ml-9">
@@ -24,7 +25,7 @@ const Cards = ({ title, image, description, action, link, glow }) => {
 
         {/* Button */}
         <button className="bg-[rgba(255,255,255,.5)] hover:bg-white duration-300 relative bottom-6 py-[3px]">
-          <a href={link}>{action}</a>
+          <Link href={link}>{action}</Link>
         </button>
       </div>
     </div>

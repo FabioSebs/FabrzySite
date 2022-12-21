@@ -7,12 +7,13 @@ make: *** No rule to make target 'all'.  Stop.
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
- 
 
-# Make data base, printed on Sun Aug 07 06:20:14 2022
+# Make data base, printed on Mon Aug 08 02:59:25 2022
 
 # Variables
 
+# environment
+FPS_BROWSER_APP_PROFILE_STRING = Internet Explorer
 # environment
 SYSTEMDRIVE = C:
 # environment
@@ -44,9 +45,11 @@ GOPATH = C:\Users\espin\go
 # environment
 ACLOCAL_PATH = C:\Program Files\Git\mingw64\share\aclocal;C:\Program Files\Git\usr\share\aclocal
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_16780_EFFRKYKDOTQARCOU
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_11304_SNWIUOMTOIJKLSQG
 # environment
 ORIGINAL_TEMP = C:/Users/espin/AppData/Local/Temp
+# environment
+FPS_BROWSER_USER_PROFILE_STRING = Default
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # default
@@ -64,7 +67,7 @@ OLDPWD = C:/Users/espin/Desktop/Computer Science
 # automatic
 %F = $(notdir $%)
 # environment
-VSCODE_CODE_CACHE_PATH = C:\Users\espin\AppData\Roaming\Code\CachedData\3b889b090b5ad5793f524b5d1d39fda662b96a2a
+VSCODE_CODE_CACHE_PATH = C:\Users\espin\AppData\Roaming\Code\CachedData\da76f93349a72022ca4670c1b84860304616aaa2
 # environment
 SSH_ASKPASS = C:/Program Files/Git/mingw64/bin/git-askpass.exe
 # environment
@@ -106,7 +109,7 @@ MAKEFILE_LIST := makefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 16780
+VSCODE_PID = 11304
 # automatic
 ?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
 # environment
@@ -166,8 +169,7 @@ LOGONSERVER = \\LAPTOP-6VSS0VBA
 # environment
 USERNAME = espin
 # environment
-TERM_PROGRAM  
-= mintty
+TERM_PROGRAM = mintty
 # environment
 COMMONPROGRAMFILES = C:\Program Files (x86)\Common Files
 # automatic
@@ -235,7 +237,7 @@ TEMP = C:\Users\espin\AppData\Local\Temp
 # environment
 TERM = xterm
 # environment
-VSCODE_IPC_HOOK = \\.\pipe\9ccbd71fb2a7017c10b2dc64aafeb067-1.69.2-main-sock
+VSCODE_IPC_HOOK = \\.\pipe\9ccbd71fb2a7017c10b2dc64aafeb067-1.70.0-main-sock
 # environment
 DXSDK_DIR = C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\
 # environment
@@ -267,7 +269,7 @@ TERM_PROGRAM_VERSION = 3.6.1
 # environment
 PROCESSOR_IDENTIFIER = AMD64 Family 23 Model 96 Stepping 1, AuthenticAMD
 # variable set hash-table stats:
-# Load=126/1024=12%, Rehash=0, Collisions=12/153=8%
+# Load=128/1024=12%, Rehash=0, Collisions=13/155=8%
 
 # Pattern-specific Variable Values
 
@@ -347,6 +349,6 @@ status:
 # strcache performance: lookups = 46 / hit rate = 21%
 # hash-table stats:
 # Load=36/8192=0%, Rehash=0, Collisions=0/46=0%
-# Finished Make data base on Sun Aug 07 06:20:14 2022
+# Finished Make data base on Mon Aug 08 02:59:25 2022
 
  

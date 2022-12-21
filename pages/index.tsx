@@ -39,14 +39,16 @@ const IndexPage = ({ posts }: Props) => {
   return (
     <CookiesProvider>
       <Loading.Provider value={{ loaded, setLoaded }}>
-        <LoadingPage />
-        <div
-          className={`${!loaded ? fadeIn() : "hidden"} overflow-hidden`}
-          ref={homePage}
-        >
-          <Navbar />
-          <Hero />
-          <CardSection />
+        <div className="h-screen w-screen relative overflow-x-hidden">
+          <LoadingPage />
+          <div
+            className={`${!loaded ? fadeIn() : "hidden"} overflow-hidden`}
+            ref={homePage}
+          >
+            <Navbar />
+            <Hero />
+            <CardSection />
+          </div>
         </div>
       </Loading.Provider>
     </CookiesProvider>
