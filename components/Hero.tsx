@@ -8,7 +8,7 @@ const Hero = () => {
         backgroundImage:
           "url(https://64.media.tumblr.com/43b7c06bf4469a5790aad18f8a0c352b/af669c6b67ab1000-5a/s2048x3072/a13f499a04e367ce023f04a139bc24875fe5257a.png)",
       }}
-      className="md:h-[1000px] h-[600px] w-screen relative bg-no-repeat bg-cover shadow-lg"
+      className="md:h-96 h-72 w-screen relative bg-no-repeat bg-cover shadow-lg"
     >
       <Particles
         options={{
@@ -141,7 +141,7 @@ const Hero = () => {
         className="relative w-full h-full"
       />
 
-      <div className="flex flex-col xl:text-[110px] lg:text-[100px] md:text-[80px] text-[60px] text-white justify-center items-start md:w-[500px] md:h-[650px] w-[300px] h-[450px] z-50 bg-transparent absolute top-[60%] left-3/4 transform -translate-x-1/2 -translate-y-2/3 hover:cursor-pointer">
+      <div className="flex flex-col xl:text-[70px] lg:text-[100px] md:text-[80px] text-[60px] text-white justify-center items-start bg-transparent absolute top-[60%] left-3/4 transform -translate-x-1/2 -translate-y-2/3 hover:cursor-pointer">
         <h1 className="shadow-lg hover:shadow-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-black to-red-500 px-8">
           Education
         </h1>

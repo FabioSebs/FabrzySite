@@ -61,9 +61,9 @@ const CardSection = () => {
 
   return (
     <motion.div
-      initial={{ x: "-150vh" }}
+      initial={{ x: "-250vh" }}
       animate={animation}
-      className="sm:h-[1300px] h-[800px] w-full bg-white flex flex-col md:gap-[30px] gap-[80px] justify-center items-center"
+      className="h-[1000px] w-full bg-white flex flex-col md:gap-[30px] gap-[80px] justify-start items-center pt-10"
     >
       {cardInfo.map((card) => {
         return (

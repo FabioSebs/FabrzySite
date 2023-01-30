@@ -8,9 +8,9 @@ import Image from "next/image";
 let Links = [
   { name: "HOME", link: "/" },
   { name: "PORTFOLIO", link: "/portfolio" },
-  { name: "LOGIN", link: "/login" },
+  // { name: "LOGIN", link: "/login" },
   { name: "BLOG", link: "/blog" },
-  { name: "CONTACT", link: "/contact" },
+  // { name: "CONTACT", link: "/contact" },
 ];
 
 const Navbar = () => {
@@ -19,7 +19,7 @@ const Navbar = () => {
   return (
     <div className="shadow-md w-full top-0 left-0 z-[100] block relative">
       {/* Navbar */}
-      <div className="md:flex items-center justify-between bg-[#ffffff] py-4 md:px-10 px-7">
+      <div className="md:flex items-center justify-between bg-[#ffffff] py-1 md:px-10 px-7">
         {/* Logo */}
         <Link href="/">
           <div className="font-bold  text-2xl cursor-pointer flex items-center font-[Poppins] text-gray-800 relative">
