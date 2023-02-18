@@ -1,8 +1,18 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { NextPage } from "next";
 
-const Cards = ({ title, image, description, action, link, glow }) => {
+export interface Info {
+  title: string
+  image: string
+  description: string
+  action: string
+  link: string
+  glow: string
+}
+
+const Cards : NextPage<Info> = ({ title, image, description, action, link, glow }) => {
   return (
     <div
       className={`lg:w-[900px] lg:h-[250px] sm:w-[600px] sm:h-[250px] w-[400px] h-[150px] bg-gradient-to-r from-white to-gray-400 rounded-3xl flex justify-start overflow-hidden transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 ${glow}`}

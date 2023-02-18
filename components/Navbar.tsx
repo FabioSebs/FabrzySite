@@ -5,7 +5,12 @@ import CloseIcon from "@mui/icons-material/Close";
 import MenuIcon from "@mui/icons-material/Menu";
 import Image from "next/image";
 
-let Links = [
+interface LinkInfo {
+  name: string
+  link: string
+}
+
+let Links : LinkInfo[] = [
   { name: "HOME", link: "/" },
   { name: "PORTFOLIO", link: "/portfolio" },
   // { name: "LOGIN", link: "/login" },

@@ -1,7 +1,13 @@
+import { NextPage } from 'next'
 import React from 'react'
 
+interface Props {
+    title: string
+    gif: string
+    desc: string
+}
 
-const ProjectCard = ({ title, gif, desc }) => {
+const ProjectCard : NextPage<Props> = ({ title, gif, desc }) => {
     return (
         <div className='flex justify-center rounded-md bg-slate-200 my-5 md:w-3/5 w-5/6 h-64 overflow-hidden border-[2px] transition-all duration-300 hover:border-green-300 '>
             <div className='w-1/2'>

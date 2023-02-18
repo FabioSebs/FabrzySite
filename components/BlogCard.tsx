@@ -1,8 +1,15 @@
 import React from "react";
 import sanityClient from "../sanity";
 import imageUrlBuilder from "@sanity/image-url";
+import { NextPage } from "next";
 
-const BlogCard = ({ image, title, slug }) => {
+interface Props {
+  image: string
+  title: string
+  slug: string
+}
+
+const BlogCard : NextPage<Props> = ({ image, title, slug }) => {
   return (
     <a href={`/post/${slug}`} className="group">
       <div className="bg-black h-[200px] w-[400px] relative m-4 group-hover:scale-105 transition-transform duration-200 ease-in-out">

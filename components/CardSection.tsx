@@ -6,8 +6,10 @@ import YouTubeIcon from "@mui/icons-material/YouTube";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { CookiesProvider, useCookies } from "react-cookie";
+import { Info } from "./Cards";
 
-const cardInfo = [
+
+const cardInfo : Info[] = [
   {
     title: "YouTube",
     image: "/Youtube.png",
